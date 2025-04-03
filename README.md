@@ -17,12 +17,15 @@ Or manually download the files by clicking Code → Download ZIP.
 
 ### 2. Run the Deployment Tool
 1. Open Command Prompt (cmd) and navigate to the folder:
-  -->cd Office-Deployment
+  -->cd C:\Path\To\Office\Deployment\Tool
 2. Download the Office installation files:
   -->setup.exe /download configuration.xml
 3. Install Office:
   -->setup.exe /configure configuration.xml
    
 ### 3. Office Installation Complete
-
 After installation, Office will be ready to use.
+
+💡 Tips:
+If you want to install a specific Office version (Office 2016, 2019, etc.), modify the Product ID and Channel in the XML file accordingly.
+Ensure you have a stable internet connection for downloading the Office files.
