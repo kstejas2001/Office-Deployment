@@ -57,7 +57,7 @@ Channel="PerpetualVL2021" → Specifies the Office 2021 volume license version.
 Language ID="en-us" → Language set to English (US).
   
 3. Save the file as:
-            configuration.xml
+            --> configuration.xml
 Choose Save as type → All Files.
 Save it in the same folder as the Office Deployment Tool.
 
@@ -65,8 +65,8 @@ Save it in the same folder as the Office Deployment Tool.
 
 1. Open Command Prompt as Administrator.
 2. Navigate to the folder containing the Office Deployment Tool and configuration.xml:
-            cd C:\Path\To\Office\Deployment\Tool
+            --> cd C:\Path\To\Office\Deployment\Tool
 3. First, download the Office installation files:
-            setup.exe /download configuration.xml
+            --> setup.exe /download configuration.xml
 4. Once the download is complete, install Office:
-            setup.exe /configure configuration.xml
+            --> setup.exe /configure configuration.xml
