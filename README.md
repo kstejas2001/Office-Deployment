@@ -29,3 +29,44 @@ After installation, Office will be ready to use.
 💡 Tips:
 If you want to install a specific Office version (Office 2016, 2019, etc.), modify the Product ID and Channel in the XML file accordingly.
 Ensure you have a stable internet connection for downloading the Office files.
+
+### ERROR MESSAGE
+The error message "The configuration file wasn't specified. Error Code: 0-2025 (0)" when running the Office Deployment Tool (ODT) indicates that you haven't specified a configuration file, which is necessary for the installation process.
+
+
+### ✅ 1. Create a Configuration File:
+To install Office, you need a configuration.xml file with installation settings.
+
+## 🔥 Step 1: Create the XML Configuration File
+
+  1. Open Notepad.
+  2. Paste the following content for Office 2021 (you can modify it for other versions):
+            <Configuration>
+              <Add OfficeClientEdition="64" Channel="PerpetualVL2021">
+                <Product ID="ProPlus2021Volume">
+                  <Language ID="en-us" />
+                </Product>
+              </Add>
+              <Display Level="Full" AcceptEULA="TRUE" />
+              <Property Name="AUTOACTIVATE" Value="1" />
+            </Configuration>
+
+✅ Explanation:
+OfficeClientEdition="64" → For 64-bit Office installation. Use 32 for 32-bit.
+Channel="PerpetualVL2021" → Specifies the Office 2021 volume license version.
+Language ID="en-us" → Language set to English (US).
+  
+3. Save the file as:
+            configuration.xml
+Choose Save as type → All Files.
+Save it in the same folder as the Office Deployment Tool.
+
+## 🛠️ Step 2: Install Office with the Configuration File
+
+1. Open Command Prompt as Administrator.
+2. Navigate to the folder containing the Office Deployment Tool and configuration.xml:
+            cd C:\Path\To\Office\Deployment\Tool
+3. First, download the Office installation files:
+            setup.exe /download configuration.xml
+4. Once the download is complete, install Office:
+            setup.exe /configure configuration.xml
